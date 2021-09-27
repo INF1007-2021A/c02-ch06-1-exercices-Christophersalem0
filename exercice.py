@@ -27,9 +27,7 @@ def combine_strings_and_numbers(strings, num_combinations, excluded_multiples):
 		#for s in strings:
 			#if excluded_multiples is None or i % excluded_multiples != 0:
 				#result.append(s + str(i))
-	result=[s + str(i) for i in range(1, num_combinations + 1) for s in strings if excluded_multiples is None or i % excluded_multiples != 0]
-
-	return result
+	return [s + str(i) for i in range(1, num_combinations + 1) for s in strings if excluded_multiples is None or i % excluded_multiples != 0]
 
 if __name__ == "__main__":
 	print(get_maximums([[1,2,3], [6,5,4], [10,11,12], [8,9,7]]))
